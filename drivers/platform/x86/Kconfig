@@ -140,6 +140,19 @@ config YOGABOOK_WMI
 	  To compile this driver as a module, choose M here: the module will
 	  be called lenovo-yogabook-wmi.
 
+config IDEAPAD_WMI_FN_KEYS
+	tristate "Lenovo IdeaPad WMI Fn Keys"
+	depends on ACPI_WMI
+	depends on INPUT
+	select INPUT_SPARSEKMAP
+	help
+	  Say Y here if you want to receive key presses from some lenovo
+	  specific keys. (Star Key, Support Key, Virtual Background,
+	  Dark Mode Toggle, ...)
+
+	  To compile this driver as a module, choose M here: the module will
+	  be called ideapad-wmi-fn-keys.
+
 config ACERHDF
 	tristate "Acer Aspire One temperature and fan driver"
 	depends on ACPI && THERMAL
