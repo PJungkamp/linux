@@ -156,7 +156,7 @@
 	light-sensor@23 {
 		compatible = "liteon,ltr559";
 		reg = <0x23>;
-		proximity-near-level = <75>;
+		proximity-near-level = <76>;
 
 		interrupt-parent = <&tlmm>;
 		interrupts = <115 IRQ_TYPE_EDGE_FALLING>;
