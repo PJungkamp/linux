@@ -953,7 +953,6 @@ asmlinkage long sys_set_mempolicy_home_node(unsigned long start, unsigned long l
 asmlinkage long sys_cachestat(unsigned int fd,
 		struct cachestat_range __user *cstat_range,
 		struct cachestat __user *cstat, unsigned int flags);
-
 /*
  * Architecture-specific system calls
  */
@@ -1283,4 +1282,10 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 		int __user *optlen);
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
+
+/* LKP */
+
+asmlinkage int sys_hello(char *who, int who_size, char *buffer, int buffer_size);
+
 #endif
+
